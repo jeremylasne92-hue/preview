@@ -30,23 +30,42 @@
 - **ECHOLink** : plateforme d'action collaborative avec 3 fonctionnalites : enigmes/apprentissage, hubs de projets geolocalises, systeme economique alternatif (troc, monnaie virtuelle)
 - **Cognisphere** : OS d'apprentissage augmente par IA avec tuteur IA socratique, memorisation espacee (courbe Ebbinghaus), apprentissage social collaboratif (Focus Camps, binomes d'etude)
 
+### Gouvernance (Constitution ECHO v1)
+L'association adopte un modele de gouvernance horizontale inspire de la sociocratie, Frederic Laloux (organisations Teal), Elinor Ostrom (gouvernance des communs) et les traditions africaines de dialogue circulaire (palabre).
+
+**Structure en 14 cercles** : ECHOmovie (serie), ECHOcommunaute, ECHOpartenariat, ECHOnomie (admin/finance), ECHOcommunication, ECHOnet (infra numerique), ECHOtech, ECHOacademy, ECHOsocial, ECHOCognisphere, ECHOsound, ECHOood (documentaire), ECHOallies, ECHOlearn.
+
+**Conseil Oecumenique (ECHOC)** : 13 membres, decisions par consentement, representant legal tournant (mandat 18 mois).
+
+**Phases de croissance** : La Graine (5 membres) → La Germination (7-9) → L'Enracinement (13) → L'Emergence (25) → Les Branches (50) → La Floraison (100+) → La Fructification (11+ salaries).
+
 ### Stack technique identifie
-- **Frontend** : Next.js (projet actuel) / React + Tailwind + Shadcn UI
-- **Backend** : FastAPI + MongoDB (prevu)
+- **Site web** : Next.js (projet actuel)
+- **Cognisphere (PRD v1.3)** : Electron + React + TypeScript (desktop), React Native (mobile), Python + LLM local (Mistral 7B) + Whisper + LanceDB, SQLite, CRDT sync, architecture local-first
+- **ECHOLink** : React + Tailwind + Shadcn UI (frontend), FastAPI + MongoDB (backend)
+- **Algorithme cle** : FSRS-5 (repetition espacee), matching study buddies, graphe de connaissances D3.js
+- **Securite** : AES-256 chiffrement, X25519+AES-GCM transit, architecture zero-data-server
 - **Outils** : Claude Code comme collaborateur technique principal, Discord, Google Drive
 
 ### Equipe
-- Cofondateurs : Eddyason Koffi, Jeremy Lasne
-- ~15 membres actifs : developpeurs web, data analyst, ingenieur IA, community manager, realisateur, scenaristes, monteur
-- Thomas (fondateur/president, profil ENTJ)
+- Cofondateurs : Eddyason Koffi, Jeremy Lasne (representant legal, gardien de la raison d'etre)
+- Deborah Prevaud (chargee de developpement), Clement Grandmontagne (co-realisateur), Thierry Korutos-Chatam (partenariats)
+- ~15 membres actifs : developpeurs web, data analyst, ingenieur IA, community manager, scenaristes, monteur
 - Budget : financement par partenariats, crowdfunding, subventions, monetisation YouTube
+
+### Modele economique Cognisphere
+- **FREE** (0EUR) : 100 cards, 3 mind maps, 1 device
+- **PRO** (9EUR/mois) : Illimite, multi-device, Palais Mental 3D, scheduling complet
+- **TEAM** (15EUR/user/mois) : Admin panel, SLA 99.9%
+- Cible : 50 000 utilisateurs, 5% conversion = 2 500 Pro = ~22 500EUR MRR
 
 ### Urgences operationnelles identifiees
 1. Site web a finaliser (prevu 01/03/2026 - en retard)
 2. Bande-annonce en production (mars 2026)
 3. Plateforme ECHOLink a developper
-4. Cognisphere a prototyper (candidature Emergence IDF 2026)
+4. Cognisphere MVP desktop a livrer (cible mai 2026, candidature Emergence IDF 2026)
 5. Gestion administrative de l'association (comptabilite, adhesions, RGPD)
+6. Prototype mobile Cognisphere (Phase 1 : companion review-only)
 
 ---
 
@@ -180,12 +199,12 @@ La proposition ci-dessous combine ces 3 sources. Chaque skill est un fichier SKI
 - **Priorite** : P1 Important
 - **Synergies** : fastapi-backend-architect, cognisphere-learning-engine
 
-#### Skill 15 - spaced-repetition-engine
+#### Skill 15 - fsrs5-spaced-repetition-engine
 - **Source** : Custom SKILL.md
 - **Domaine** : Backend / Algorithme
-- **Cas d'usage ECHO** : Moteur de repetition espacee pour Cognisphere base sur la courbe d'Ebbinghaus. Calcul des dates optimales de revision, priorisation intelligente des sessions, planning adaptatif
+- **Cas d'usage ECHO** : Implementation de l'algorithme FSRS-5 (Free Spaced Repetition Scheduler) pour Cognisphere. Modele DSR (Difficulty-Stability-Retrievability), extensions pour contexte temporel, graphe de dependances, detection de leeches. Grades Again/Hard/Good/Easy, gestion fatigue cognitive
 - **Priorite** : P1 Important
-- **Synergies** : mongodb-schema-designer, cognisphere-learning-engine
+- **Synergies** : mongodb-schema-designer, electron-desktop-builder
 
 ---
 
@@ -443,21 +462,35 @@ La proposition ci-dessous combine ces 3 sources. Chaque skill est un fichier SKI
 - **Priorite** : P1 Important
 - **Synergies** : ci-cd-pipeline-builder, fastapi-backend-architect
 
-#### Skill 48 - docker-deployment-manager
+#### Skill 48 - electron-desktop-builder
+- **Source** : Custom SKILL.md
+- **Domaine** : DevOps / Desktop
+- **Cas d'usage ECHO** : Build et packaging de l'app desktop Cognisphere en Electron + React + TypeScript. Auto-updater avec rollout progressif (10%→50%→100%), canaux Stable/Beta/Canary. PyInstaller pour le backend Python local (LLM, Whisper, LanceDB)
+- **Priorite** : P0 Indispensable (pour Cognisphere MVP)
+- **Synergies** : ci-cd-pipeline-builder, fsrs5-spaced-repetition-engine
+
+#### Skill 49 - docker-deployment-manager
 - **Source** : Custom SKILL.md
 - **Domaine** : DevOps / Infra
 - **Cas d'usage ECHO** : Containerisation du backend FastAPI + MongoDB. Docker Compose pour l'environnement de dev, deploiement production
 - **Priorite** : P1 Important
 - **Synergies** : fastapi-backend-architect, ci-cd-pipeline-builder
 
-#### Skill 49 - backup-recovery-skill
+#### Skill 50 - crdt-sync-engine
+- **Source** : Custom SKILL.md
+- **Domaine** : DevOps / Data Sync
+- **Cas d'usage ECHO** : Implementation du moteur de synchronisation CRDT (Conflict-free Replicated Data Types) pour Cognisphere. Sync bidirectionnelle desktop/mobile, verification d'integrite du graphe post-sync (DFS cycle detection), resolution auto des noeuds orphelins et doublons semantiques
+- **Priorite** : P1 Important (Phase 2 Cognisphere)
+- **Synergies** : electron-desktop-builder, fsrs5-spaced-repetition-engine
+
+#### Skill 51 - backup-recovery-skill
 - **Source** : Custom SKILL.md
 - **Domaine** : DevOps / Securite
 - **Cas d'usage ECHO** : Strategies de sauvegarde pour la base MongoDB (donnees adherents, projets, progression Cognisphere). Backups automatiques, plan de reprise d'activite
 - **Priorite** : P2 Utile
 - **Synergies** : docker-deployment-manager, mongodb-schema-designer
 
-#### Skill 50 - monitoring-alerting-skill
+#### Skill 52 - monitoring-alerting-skill
 - **Source** : Custom SKILL.md
 - **Domaine** : DevOps / Monitoring
 - **Cas d'usage ECHO** : Supervision des services en production. Alertes en cas de panne du site web, des API, ou des plateformes. Uptime monitoring, logs centralises
