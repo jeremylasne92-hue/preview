@@ -95,7 +95,97 @@ La proposition ci-dessous combine ces 3 sources. Chaque skill est un fichier SKI
 
 ---
 
-### DOMAINE 1 : Developpement Web Frontend (8 skills)
+### DOMAINE 1 : Administration Associative Loi 1901 (12 skills)
+
+> **Domaine prioritaire.** Ces skills couvrent la gestion quotidienne, juridique et financiere du Mouvement ECHO en tant qu'association loi 1901. Ils tiennent compte de la gouvernance sociocratique par cercles definie dans la Constitution ECHO v1.
+
+#### Skill A1 - governance-circles-manager
+- **Source** : Custom SKILL.md
+- **Domaine** : Gouvernance / Organisation
+- **Cas d'usage ECHO** : Gestion operationnelle des 14 cercles sociocratiques de l'association. Suivi de la composition de chaque cercle (premier lien, second lien, membres), facilitation des processus de decision par consentement, mitose obligatoire au-dela de 12 membres, animation du Conseil Oecumenique (ECHOC, 13 membres). Gestion des mandats tournants du representant legal (18 mois) et du facilitateur. Tenue du registre des decisions du ECHOC
+- **Priorite** : P0 Indispensable
+- **Synergies** : meeting-notes-ag, member-registry, document-generator-asso
+
+#### Skill A2 - member-registry
+- **Source** : Custom SKILL.md
+- **Domaine** : Administration / Membres
+- **Cas d'usage ECHO** : Registre officiel des adherents conforme aux obligations loi 1901. Inscription, demission, radiation, cotisations annuelles. Suivi du statut (membre actif, bienfaiteur, partenaire, fondateur). Historique des contributions et engagements par cercle. Alertes pour cotisations en retard. Export pour declarations et AG. Respect des phases de croissance (La Graine → La Fructification)
+- **Priorite** : P0 Indispensable
+- **Synergies** : governance-circles-manager, financial-tracker-asso, cerfa-fiscal-receipts
+
+#### Skill A3 - financial-tracker-asso
+- **Source** : Custom SKILL.md
+- **Domaine** : Administration / Comptabilite
+- **Cas d'usage ECHO** : Comptabilite conforme aux obligations des associations loi 1901 (plan comptable associatif). Suivi des recettes (cotisations, dons, subventions, crowdfunding, mecenat) et depenses. Rapprochement bancaire mensuel. Budget previsionnel annuel. Generation du bilan financier et compte de resultat pour l'AG. Suivi par cercle (ECHOnomie). Seuils d'alerte pour le commissaire aux comptes si >153 000EUR de subventions
+- **Priorite** : P0 Indispensable
+- **Synergies** : member-registry, cerfa-fiscal-receipts, grant-manager
+
+#### Skill A4 - cerfa-fiscal-receipts
+- **Source** : Custom SKILL.md
+- **Domaine** : Administration / Fiscalite
+- **Cas d'usage ECHO** : Generation de recus fiscaux Cerfa n°11580*04 (dons) et Cerfa n°11580*03 (mecenat) conformes aux articles 200 et 238 bis du CGI. Verification de l'eligibilite de l'association a emettre des recus fiscaux (interet general, gestion desinteressee). Numerotation sequentielle, archivage 6 ans, envoi automatique aux donateurs. Suivi du montant total des dons pour les declarations fiscales de l'association
+- **Priorite** : P0 Indispensable
+- **Synergies** : financial-tracker-asso, member-registry, document-generator-asso
+
+#### Skill A5 - meeting-notes-ag
+- **Source** : Custom SKILL.md
+- **Domaine** : Administration / Reunions
+- **Cas d'usage ECHO** : Gestion complete des Assemblees Generales (ordinaires et extraordinaires) et reunions du ECHOC. Convocations avec ordre du jour (15 jours avant), feuilles de presence, verification du quorum, proces-verbaux conformes, registre des deliberations. Gestion des votes par consentement (specifique ECHO). Preparation du rapport moral et du rapport financier pour l'AGO. Archivage des PV au siege social
+- **Priorite** : P0 Indispensable
+- **Synergies** : governance-circles-manager, document-generator-asso, member-registry
+
+#### Skill A6 - prefecture-declarations
+- **Source** : Custom SKILL.md
+- **Domaine** : Administration / Juridique
+- **Cas d'usage ECHO** : Declarations obligatoires a la prefecture des Yvelines (siege a Bougival 78380). Declaration de modification (changement de bureau, de siege, d'objet). Publication au Journal Officiel. Mise a jour du RNA (Repertoire National des Associations). Suivi du SIRET (933 682 510 00013) et des obligations INSEE. Declaration de changement de representant legal lors des mandats tournants (tous les 18 mois)
+- **Priorite** : P0 Indispensable
+- **Synergies** : governance-circles-manager, association-legal-advisor-asso
+
+#### Skill A7 - association-legal-advisor-asso
+- **Source** : Custom SKILL.md
+- **Domaine** : Administration / Juridique
+- **Cas d'usage ECHO** : Conseil juridique specialise loi 1901. Verification de conformite des statuts et du reglement interieur avec la legislation en vigueur. Obligations employeur si salaries (phase La Fructification : CSE obligatoire a 11+ salaries). Responsabilite du president et des dirigeants. Assurance responsabilite civile. Conventions de mise a disposition de locaux. Droit du benevole (loi du 23 mai 2006). Articulation avec la gouvernance horizontale specifique ECHO (pas de president permanent)
+- **Priorite** : P0 Indispensable
+- **Synergies** : prefecture-declarations, rgpd-compliance-asso, volunteer-manager
+
+#### Skill A8 - volunteer-manager
+- **Source** : Custom SKILL.md
+- **Domaine** : Administration / Ressources Humaines
+- **Cas d'usage ECHO** : Gestion des benevoles du Mouvement ECHO (~15 membres actifs). Lettre de mission pour chaque benevole. Valorisation comptable du benevolat (methode du cout de remplacement, utile pour les dossiers de subvention). Planning des disponibilites. Suivi des heures par cercle. Remboursement de frais (justificatifs, bareme kilometrique). Contrat de benevolat (non obligatoire mais recommande). Couverture assurance. Attestation de benevolat pour les benevoles
+- **Priorite** : P1 Important
+- **Synergies** : member-registry, governance-circles-manager, financial-tracker-asso
+
+#### Skill A9 - grant-manager
+- **Source** : Custom SKILL.md
+- **Domaine** : Administration / Subventions
+- **Cas d'usage ECHO** : Gestion complete du cycle de vie des subventions. Veille des appels a projets (Emergence IDF 2026, FDVA, FONJEP, Region IDF, collectivites). Constitution des dossiers Cerfa n°12156*06 (demande de subvention). Budget previsionnel par action. Convention d'objectifs et de moyens. Reporting et bilan d'utilisation obligatoire. Suivi des echeances et relances. Pipeline des demandes en cours (soumis, accorde, refuse, a reporter)
+- **Priorite** : P0 Indispensable
+- **Synergies** : financial-tracker-asso, document-generator-asso, association-legal-advisor-asso
+
+#### Skill A10 - partnership-crm
+- **Source** : Custom SKILL.md
+- **Domaine** : Administration / Partenariats
+- **Cas d'usage ECHO** : CRM dedie aux partenaires de l'ECHOSystem (experts, financiers, audiovisuels, educatifs). Fiche partenaire avec : contact, type de partenariat, conventions signees, historique des echanges, valeur apportee. Pipeline de prospection. Modeles de conventions de partenariat. Suivi des engagements reciproques. Mapping partenaires par cercle (ECHOpartenariat). Gestion de l'axe France-Afrique (polycentricite de la gouvernance)
+- **Priorite** : P1 Important
+- **Synergies** : grant-manager, contract-templates-asso, volunteer-manager
+
+#### Skill A11 - document-generator-asso
+- **Source** : Custom SKILL.md
+- **Domaine** : Administration / Documents
+- **Cas d'usage ECHO** : Generation de tous les documents officiels de l'association. Modeles : attestation de domiciliation, attestation d'adhesion, lettre de mission benevole, convention de partenariat, rapport moral annuel, rapport d'activite, budget previsionnel, bilan financier, compte de resultat, PV d'AG, PV de ECHOC, convocations, courrier prefecture. Format PDF avec en-tete ECHO et mentions legales obligatoires
+- **Priorite** : P0 Indispensable
+- **Synergies** : Tous les skills du domaine Administration
+
+#### Skill A12 - rgpd-compliance-asso
+- **Source** : Custom SKILL.md
+- **Domaine** : Administration / Conformite
+- **Cas d'usage ECHO** : Conformite RGPD specifique aux associations. Registre des traitements (membres, donateurs, benevoles, newsletter). Politique de confidentialite conforme. Durees de conservation (3 ans apres dernier contact pour prospects, duree de la relation + 5 ans pour membres). Droit d'acces, rectification, effacement, portabilite. Base legale par traitement (consentement, interet legitime, obligation legale). DPO si traitements sensibles. Formation des benevoles a la protection des donnees
+- **Priorite** : P0 Indispensable
+- **Synergies** : member-registry, association-legal-advisor-asso, document-generator-asso
+
+---
+
+### DOMAINE 2 : Developpement Web Frontend (8 skills)
 
 #### Skill 1 - nextjs-app-builder
 - **Source** : Custom SKILL.md
@@ -501,6 +591,76 @@ La proposition ci-dessous combine ces 3 sources. Chaque skill est un fichier SKI
 
 ## PARTIE 4 - Workflows Automatises
 
+### Workflow 0 : Cycle de Gouvernance Mensuel (ECHOC)
+- **Processus automatise** : Reunion mensuelle du Conseil Oecumenique et suivi des decisions
+- **Declencheur** : 3 jours avant la date de reunion mensuelle du ECHOC
+- **Etapes** :
+  1. Preparation → `governance-circles-manager` → Collecte des remontees de chaque cercle (premier/second liens)
+  2. Convocation → `document-generator-asso` → Envoi de l'ordre du jour avec 3 jours de preavis
+  3. Reunion → `meeting-notes-ag` → Prise de notes, gestion du processus de consentement, enregistrement des objections
+  4. PV → `document-generator-asso` → Generation du PV de reunion du ECHOC, archivage au registre
+  5. Diffusion → `governance-circles-manager` → Transmission des decisions aux cercles concernes
+  6. Suivi → `governance-circles-manager` → Mise a jour du tableau de suivi des decisions, assignation aux cercles
+- **Benefice** : Gouvernance horizontale fluide malgre la complexite du modele sociocratique
+- **Prerequis** : ECHOC constitue (phase L'Enracinement, 13 membres minimum)
+
+### Workflow 0b : Preparation et Tenue de l'Assemblee Generale
+- **Processus automatise** : Cycle complet de l'AG annuelle obligatoire
+- **Declencheur** : 2 mois avant la date d'AG prevue
+- **Etapes** :
+  1. Convocation → `document-generator-asso` → Envoi convocations avec ordre du jour (15 jours avant minimum)
+  2. Rapport moral → `governance-circles-manager` → Compilation du bilan d'activite de chaque cercle
+  3. Rapport financier → `financial-tracker-asso` → Generation du bilan, compte de resultat, budget previsionnel N+1
+  4. Feuille de presence → `member-registry` → Generation de la feuille de presence, verification quorum
+  5. Votes → `meeting-notes-ag` → Gestion des votes (approbation comptes, renouvellement mandats, modifications statuts)
+  6. PV → `document-generator-asso` → Redaction du PV d'AG, signature, archivage
+  7. Declarations → `prefecture-declarations` → Si modifications (bureau, statuts) : declaration en prefecture + publication JO
+  8. Diffusion → `document-generator-asso` → Envoi du PV aux membres absents
+- **Benefice** : AG conforme juridiquement, preparee en 1 semaine au lieu de 1 mois
+- **Prerequis** : Registre des membres a jour, comptabilite cloturee
+
+### Workflow 0c : Gestion des Cotisations et Recus Fiscaux
+- **Processus automatise** : Cycle annuel de collecte des cotisations et emission des recus
+- **Declencheur** : Date anniversaire d'adhesion de chaque membre + cycle annuel en janvier
+- **Etapes** :
+  1. Appel → `member-registry` → Envoi des appels a cotisation avec montant et echeance
+  2. Suivi → `financial-tracker-asso` → Enregistrement des paiements recus, lettrage comptable
+  3. Relance → `member-registry` → Relance automatique a J+15, J+30, J+45
+  4. Recu fiscal → `cerfa-fiscal-receipts` → Generation du Cerfa pour les dons et la part exceeding la cotisation
+  5. Radiation → `member-registry` → Si impaye apres 3 relances : proposition de radiation au ECHOC
+  6. Bilan → `financial-tracker-asso` → Synthese annuelle des cotisations percues/impayees pour l'AG
+- **Benefice** : Zero cotisation oubliee, recus fiscaux conformes envoyes automatiquement
+- **Prerequis** : Montant des cotisations defini par l'AG, eligibilite fiscale verifiee
+
+### Workflow 0d : Demande de Subvention
+- **Processus automatise** : Constitution et suivi d'un dossier de subvention complet
+- **Declencheur** : Identification d'un appel a projets (Emergence IDF 2026, FDVA, etc.)
+- **Etapes** :
+  1. Eligibilite → `grant-manager` → Analyse des criteres, verification de la compatibilite avec ECHO
+  2. Dossier Cerfa → `grant-manager` → Remplissage du Cerfa n°12156*06
+  3. Budget action → `financial-tracker-asso` → Budget previsionnel detaille par poste
+  4. Pieces jointes → `document-generator-asso` → Statuts, RI, dernier PV AG, dernier bilan, SIRET, RIB
+  5. Valorisation benevolat → `volunteer-manager` → Calcul et attestation de la valeur du benevolat
+  6. Lettre → `document-generator-asso` → Lettre de sollicitation signee du representant legal
+  7. Soumission → `grant-manager` → Depot + ajout au pipeline de suivi
+  8. Suivi → `grant-manager` → Relances, reponse, convention, reporting final si accorde
+- **Benefice** : Dossier complet et professionnel en 2 jours, suivi sans perte
+- **Prerequis** : Comptabilite a jour, AG tenue, SIRET actif
+
+### Workflow 0e : Declaration de Changement en Prefecture
+- **Processus automatise** : Modification officielle de l'association (changement de representant legal tous les 18 mois, etc.)
+- **Declencheur** : Decision du ECHOC (mandat tournant) ou de l'AG (modification statuts/siege)
+- **Etapes** :
+  1. Decision → `meeting-notes-ag` → Extraction de la decision du PV (ECHOC ou AG)
+  2. Formulaire → `prefecture-declarations` → Remplissage Cerfa n°13971*03 (modification) ou e-modification via le compte asso
+  3. Pieces → `document-generator-asso` → PV de decision, nouveaux statuts si besoin, liste des dirigeants
+  4. Depot → `prefecture-declarations` → Envoi en prefecture ou via le compte asso en ligne
+  5. JO → `prefecture-declarations` → Publication au Journal Officiel si modification des statuts ou du siege
+  6. Mise a jour → `member-registry` → Actualisation des informations internes (representant, siege, etc.)
+  7. INSEE → `prefecture-declarations` → Verification mise a jour du SIRET si changement de siege
+- **Benefice** : Conformite legale assuree malgre les mandats tournants specifiques a ECHO
+- **Prerequis** : Acces au compte asso en ligne, PV de decision
+
 ### Workflow 1 : Onboarding Nouveau Membre
 - **Processus automatise** : Inscription d'un nouvel adherent, de la candidature a l'integration complete
 - **Declencheur** : Formulaire d'adhesion soumis sur le site web
@@ -537,7 +697,7 @@ La proposition ci-dessous combine ces 3 sources. Chaque skill est un fichier SKI
   3. Relances → `email-template-builder` → Envoi automatique des relances de cotisation
   4. Reporting → `analytics-dashboard-builder` → Generation du tableau de bord mensuel
   5. Reunion → `meeting-notes-generator` → Preparation de l'ordre du jour de la reunion mensuelle
-- **Benefice** : Thomas peut piloter l'administratif en 2h/mois au lieu de 2 jours
+- **Benefice** : Le representant legal peut piloter l'administratif en 2h/mois au lieu de 2 jours
 - **Prerequis** : Base de donnees membres, integration comptable
 
 ### Workflow 4 : Creation de Projet Collaboratif ECHOLink
@@ -610,8 +770,25 @@ La proposition ci-dessous combine ces 3 sources. Chaque skill est un fichier SKI
 
 ## PARTIE 5 - Plan d'Implementation
 
-### Vague 1 : Fondations (Semaines 1-4)
-**Objectif** : Poser les bases techniques et organisationnelles
+### Vague 1 : Administration & Fondations (Semaines 1-4)
+**Objectif** : Mettre en place la gestion associative et poser les bases techniques
+
+**Bloc A - Administration associative (prioritaire)**
+
+| # | Skill | Justification |
+|---|---|---|
+| A1 | `governance-circles-manager` | Gestion des cercles et du ECHOC - coeur de la gouvernance ECHO |
+| A2 | `member-registry` | Registre des adherents - obligation legale loi 1901 |
+| A3 | `financial-tracker-asso` | Comptabilite associative - obligation legale |
+| A4 | `cerfa-fiscal-receipts` | Recus fiscaux - indispensable pour les dons et mecenat |
+| A5 | `meeting-notes-ag` | PV de reunions et AG - obligation legale |
+| A6 | `prefecture-declarations` | Declarations prefecture - obligation legale (mandats tournants) |
+| A7 | `association-legal-advisor-asso` | Conseil juridique loi 1901 |
+| A9 | `grant-manager` | Dossiers de subvention (Emergence IDF 2026 en cours) |
+| A11 | `document-generator-asso` | Generation de tous les documents officiels |
+| A12 | `rgpd-compliance-asso` | Conformite RGPD des donnees membres/donateurs |
+
+**Bloc B - Site web (en parallele)**
 
 | # | Skill | Justification |
 |---|---|---|
@@ -620,27 +797,41 @@ La proposition ci-dessous combine ces 3 sources. Chaque skill est un fichier SKI
 | 3 | `shadcn-ui-integrator` | Composants UI du site |
 | 4 | `design-system-manager` | Charte graphique coherente |
 | 5 | `content-writer-fr` | Contenu du site web |
-| 6 | `rgpd-compliance-checker` | Conformite legale avant mise en ligne |
-| 7 | `association-legal-advisor` | Documents administratifs |
-| 8 | `ci-cd-pipeline-builder` | Deploiement automatise du site |
-| 9 | `auth-system-builder` | Systeme d'adhesion en ligne |
-| 10 | `member-management-skill` | Gestion des premiers adherents |
 
-**Workflows activables** : Onboarding Nouveau Membre (partiel), Gestion Mensuelle (partiel)
+**Workflows activables** : Gouvernance ECHOC, AG, Cotisations/Recus, Demande Subvention, Declaration Prefecture, Onboarding (partiel)
 
-**Dependances** : Les skills 1-4 sont prerequis pour tout le reste du frontend. Le skill 9 est prerequis pour le skill 10.
+**Dependances** : Les skills A1-A3 sont prerequis pour tout le reste de l'administration. Le bloc B peut avancer en parallele du bloc A.
 
 ---
 
-### Vague 2 : Production (Semaines 5-12)
-**Objectif** : Plateformes fonctionnelles et production de contenu
+### Vague 2 : Production & Partenariats (Semaines 5-12)
+**Objectif** : Administration avancee, plateformes fonctionnelles, production de contenu
+
+**Bloc A - Administration avancee**
+
+| # | Skill | Justification |
+|---|---|---|
+| A8 | `volunteer-manager` | Gestion des benevoles (plannings, valorisation, remboursements) |
+| A10 | `partnership-crm` | CRM partenaires de l'ECHOSystem |
+| 28 | `intellectual-property-advisor` | Protection des creations (depot marque ECHO) |
+| 29 | `contract-template-generator` | Conventions partenariat, cession droits, CGU |
+
+**Bloc B - Backend & Plateformes**
 
 | # | Skill | Justification |
 |---|---|---|
 | 11 | `fastapi-backend-architect` | Backend des plateformes |
 | 12 | `mongodb-schema-designer` | Modelisation des donnees |
 | 13 | `api-endpoint-designer` | APIs pour ECHOLink et Cognisphere |
-| 14 | `financial-tracker` | Comptabilite de l'association |
+| 22 | `video-player-integrator` | Lecteur video pour les episodes |
+| 23 | `interactive-map-builder` | Carte des projets ECHOLink |
+| 24 | `file-upload-media-handler` | Import de contenus Cognisphere |
+| 25 | `fsrs5-spaced-repetition-engine` | Moteur d'apprentissage Cognisphere |
+
+**Bloc C - Communication & Contenu**
+
+| # | Skill | Justification |
+|---|---|---|
 | 15 | `social-media-content-creator` | Communication pour la bande-annonce |
 | 16 | `transmedia-narrative-planner` | Coherence transmedia |
 | 17 | `seo-optimizer` | Referencement du site |
@@ -648,19 +839,13 @@ La proposition ci-dessous combine ces 3 sources. Chaque skill est un fichier SKI
 | 19 | `newsletter-architect` | Newsletter periodique |
 | 20 | `project-tracker` | Suivi de la production S1 |
 | 21 | `screenplay-formatter` | Reecriture des scenarios S1 |
-| 22 | `video-player-integrator` | Lecteur video pour les episodes |
-| 23 | `interactive-map-builder` | Carte des projets ECHOLink |
-| 24 | `file-upload-media-handler` | Import de contenus Cognisphere |
-| 25 | `spaced-repetition-engine` | Moteur d'apprentissage Cognisphere |
 | 26 | `dark-theme-architect` | Theme sombre par saison |
 | 27 | `accessibility-auditor` | Accessibilite du site |
-| 28 | `intellectual-property-advisor` | Protection des creations |
-| 29 | `contract-template-generator` | Contrats partenaires/acteurs |
 | 30 | `press-kit-generator` | Dossier de presse bande-annonce |
 
-**Workflows activables** : Publication d'Episode, Demande de Subvention, Cycle Cognisphere, Campagne Crowdfunding
+**Workflows activables** : Publication d'Episode, Campagne Crowdfunding, Cycle Cognisphere, Veille Partenariale
 
-**Dependances** : Skills 11-13 sont la base du backend. Le skill 23 depend du 11. Le skill 25 depend du 12.
+**Dependances** : Skills 11-13 sont la base du backend. Le skill A10 enrichit le workflow de subvention.
 
 ---
 
@@ -698,12 +883,14 @@ La proposition ci-dessous combine ces 3 sources. Chaque skill est un fichier SKI
 ### Resume du plan
 
 ```
-VAGUE 1 (S1-S4)          VAGUE 2 (S5-S12)           VAGUE 3 (S13-S20)
-Fondations                Production                  Optimisation
-10 skills                 20 skills                   20 skills
-Site web + Adhesion       Backend + Plateformes       Avance + Scale
-2 workflows partiels      4 workflows complets        8 workflows complets
+VAGUE 1 (S1-S4)                    VAGUE 2 (S5-S12)              VAGUE 3 (S13-S20)
+Admin Asso + Fondations             Production & Partenariats      Optimisation
+10 skills admin + 5 site web        4 admin + 7 backend + 10 comm  20 skills avances
+Gouvernance, AG, Compta, RGPD       Benevoles, CRM, PI, Contrats   Scale + DevOps
+6 workflows admin                   4 workflows prod               Tous workflows
 ```
 
+**Total : 12 skills Administration Associative (A1-A12) + 52 skills techniques = 64 skills**
+
 ### Contrainte rappellee
-**Aucune installation ou suppression ne sera effectuee sans validation explicite de Thomas.** Ce document est une proposition. L'execution attend votre approbation.
+**Aucune installation ou suppression ne sera effectuee sans validation explicite de Jeremy.** Ce document est une proposition. L'execution attend votre approbation.
